@@ -20,8 +20,8 @@ Same **invariants** for both; full adds files and roles. See [`docs/INVARIANTS.m
    **PowerShell (Windows)**
 
    ```powershell
-   cd C:\Users\timan\OneDrive\Desktop\agent-workspace-template
-   .\scripts\copy-preset.ps1 -Preset full -Destination C:\Users\timan\OneDrive\Desktop\my-agent-workspace
+   cd path\to\agent-workspace-template
+   .\scripts\copy-preset.ps1 -Preset full -Destination path\to\my-agent-workspace
    ```
 
    **Bash**
@@ -57,6 +57,10 @@ You can tag the **template repo** (e.g. `v1.0.0`) and attach zip exports of `pre
 ## Optional: Agno coding pipeline
 
 See [`extensions/agno-coding/README.md`](extensions/agno-coding/README.md). Keep Python or other frameworks **out of** the markdown workspace layer.
+
+## Privacy
+
+This repository is **generic placeholders only**. Your real workspace (after you copy a preset) will gain `USER.md`, `MEMORY.md`, logs, and drafts that can be sensitive. **Do not push that working copy to a public repo.** Keep it local or use a **private** repository.
 
 ## License
 
