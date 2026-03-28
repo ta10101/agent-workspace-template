@@ -10,8 +10,9 @@ Inspired by concepts shared by [Shubham Saboo](https://www.linkedin.com/in/shubh
 | ------- | -------- | ------------ |
 | **Light** | [`presets/light/workspace`](presets/light/workspace) | Root playbooks, one example agent, `shared-context/` stubs |
 | **Full** | [`presets/full/workspace`](presets/full/workspace) | Lead at root, `research` → `intel/`, `content` + `newsletter` → `drafts/`, `HEARTBEAT.md`, specialist guides |
+| **Hybrid + gitagent** | [`presets/hybrid-gitagent/workspace`](presets/hybrid-gitagent/workspace) | Everything in **full**, plus [gitagent](https://github.com/open-gitagent/gitagent)-style `agent.yaml`, `RULES.md`, `DUTIES.md`, `skills/`, `workflows/`, `hooks/`, `knowledge/`, `memory/runtime/`, `tools/`, `config/`, `examples/` |
 
-Same **invariants** for both; full adds files and roles. See [`docs/INVARIANTS.md`](docs/INVARIANTS.md).
+Same **invariants**; larger editions add structure, not different rules. See [`docs/INVARIANTS.md`](docs/INVARIANTS.md) and [`docs/HYBRID_GITAGENT.md`](docs/HYBRID_GITAGENT.md).
 
 ## Quick start
 
@@ -22,12 +23,14 @@ Same **invariants** for both; full adds files and roles. See [`docs/INVARIANTS.m
    ```powershell
    cd path\to\agent-workspace-template
    .\scripts\copy-preset.ps1 -Preset full -Destination path\to\my-agent-workspace
+   # or: -Preset hybrid-gitagent
    ```
 
    **Bash**
 
    ```bash
    ./scripts/copy-preset.sh full ~/my-agent-workspace
+   # or: ./scripts/copy-preset.sh hybrid-gitagent ~/my-agent-workspace
    ```
 
 2. Follow [`SETUP.md`](SETUP.md) to replace placeholders and customize `USER.md`.
@@ -52,7 +55,11 @@ Roughly aligned with the “talk to your agents daily” approach:
 
 ## GitHub releases
 
-You can tag the **template repo** (e.g. `v1.0.0`) and attach zip exports of `presets/light/workspace` and `presets/full/workspace` if you want two downloadables without maintaining two branches.
+You can tag the **template repo** (e.g. `v1.0.0`) and attach zip exports of `presets/light/workspace`, `presets/full/workspace`, and `presets/hybrid-gitagent/workspace` if you want multiple downloadables without maintaining branches.
+
+## Optional: gitagent CLI
+
+See [`extensions/gitagent/README.md`](extensions/gitagent/README.md) for validating or exporting a copied **hybrid-gitagent** workspace with the upstream tool.
 
 ## Optional: Agno coding pipeline
 

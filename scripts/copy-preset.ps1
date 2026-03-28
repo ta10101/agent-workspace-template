@@ -1,6 +1,6 @@
 param(
     [Parameter(Mandatory = $true)]
-    [ValidateSet("light", "full")]
+    [ValidateSet("light", "full", "hybrid-gitagent")]
     [string] $Preset,
 
     [Parameter(Mandatory = $true)]

@@ -1,0 +1,19 @@
+# Root manifest — workspace lead / orchestrator
+# Inspired by https://github.com/open-gitagent/gitagent (spec 0.1.0 style)
+spec_version: "0.1.0"
+name: workspace-lead
+version: 0.1.0
+description: >
+  Coordinates file-based handoffs between sub-agents; owns heartbeat checks
+  and distilled MEMORY.md updates when the human requests them.
+
+model:
+  preferred: "" # e.g. claude-sonnet-4-6 — fill locally, do not commit secrets
+
+dependencies:
+  - name: research
+    mount: agents/research
+  - name: content
+    mount: agents/content
+  - name: newsletter
+    mount: agents/newsletter

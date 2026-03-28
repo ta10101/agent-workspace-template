@@ -1,0 +1,4 @@
+# Local secrets and runtime (keep out of git for public repos)
+.env
+.env.*
+.gitagent/

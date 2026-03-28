@@ -6,8 +6,9 @@ Copy a preset into a **working directory** (see [README](README.md)), then perso
 
 - **Light:** one agent, minimal files. Good for a single repetitive task.
 - **Full:** multi-agent layout, intel handoff, shared context, heartbeat stub.
+- **Hybrid-gitagent:** same team model as **full**, plus `agent.yaml`, `RULES.md`, `DUTIES.md`, `skills/`, `workflows/`, `hooks/`, `knowledge/`, `memory/runtime/`, and related stubs (see [`docs/HYBRID_GITAGENT.md`](docs/HYBRID_GITAGENT.md)).
 
-Use `scripts/copy-preset.ps1` or copy `presets/<name>/workspace/` manually.
+Use `scripts/copy-preset.ps1` or copy `presets/<name>/workspace/` manually. Preset name: `light`, `full`, or `hybrid-gitagent`.
 
 ## 2. Find and replace (global)
 

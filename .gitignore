@@ -3,4 +3,5 @@ Thumbs.db
 .env
 .env.*
 *.local
+.gitagent/
 ~$*

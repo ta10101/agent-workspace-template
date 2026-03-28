@@ -1,0 +1,4 @@
+spec_version: "0.1.0"
+name: research-agent
+version: 0.1.0
+description: Verifies signals and writes intel/DAILY-INTEL.md

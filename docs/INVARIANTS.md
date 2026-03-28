@@ -61,3 +61,7 @@ Example:
 3. Evening: human reviews in Telegram / email / local folder
 
 Your cron or automation tool (e.g. OpenClaw) only **triggers** runs; the **contract** is still files on disk.
+
+## Hybrid-gitagent preset
+
+The [`hybrid-gitagent`](../presets/hybrid-gitagent/workspace) edition adds [`gitagent`](https://github.com/open-gitagent/gitagent)-style manifests (`agent.yaml`), `RULES.md`, `DUTIES.md`, `workflows/`, and `memory/runtime/`. **The same one-writer and Layer 1–3 ideas apply;** those files are extra rails for validation, export, and clearer segregation of duties. See [`HYBRID_GITAGENT.md`](HYBRID_GITAGENT.md).

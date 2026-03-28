@@ -1,0 +1,24 @@
+# Optional human-in-the-loop pattern (conceptual).
+# Aligns with gitagent PR review flows — adapt to your git host.
+name: human-review-before-publish
+description: Drafts exist on a branch; human merges after review
+triggers:
+  - pull_request
+
+steps:
+  open_branch:
+    note: Create branch from main with drafts + intel updates only
+
+  human_review:
+    role: human
+    depends_on:
+      - open_branch
+    actions:
+      - read drafts/TODAY-SHORTFORM.md
+      - read drafts/TODAY-NEWSLETTER.md
+      - approve or request edits
+
+  merge:
+    role: human
+    depends_on:
+      - human_review
