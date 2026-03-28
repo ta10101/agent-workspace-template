@@ -1,5 +1,8 @@
 # Agent workspace template
 
+[![Release](https://img.shields.io/github/v/release/ta10101/agent-workspace-template?label=release)](https://github.com/ta10101/agent-workspace-template/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Independent template for running **multiple AI agents** coordinated by **markdown files on disk** (no message bus, no database at this layer). Same idea as public write-ups on file-based identity, operations, and memory: agents improve because **the files get richer**, not because you constantly swap models.
 
 Inspired by concepts shared by [Shubham Saboo](https://www.linkedin.com/in/shubhamsaboo) and similar posts on autonomous agent teams. This repository is **not** affiliated; names and examples are generic placeholders.
@@ -55,7 +58,7 @@ Roughly aligned with the “talk to your agents daily” approach:
 
 ## GitHub releases
 
-You can tag the **template repo** (e.g. `v1.0.0`) and attach zip exports of `presets/light/workspace`, `presets/full/workspace`, and `presets/hybrid-gitagent/workspace` if you want multiple downloadables without maintaining branches.
+Stable tag: **[v1.1.0](https://github.com/ta10101/agent-workspace-template/releases/tag/v1.1.0)**. You can also attach zip exports of `presets/light/workspace`, `presets/full/workspace`, and `presets/hybrid-gitagent/workspace` to a release for one-click downloads.
 
 ## Optional: gitagent CLI
 
