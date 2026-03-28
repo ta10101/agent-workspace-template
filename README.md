@@ -60,7 +60,7 @@ See [`extensions/agno-coding/README.md`](extensions/agno-coding/README.md). Keep
 
 ## Privacy
 
-This repository is **generic placeholders only**. Your real workspace (after you copy a preset) will gain `USER.md`, `MEMORY.md`, logs, and drafts that can be sensitive. **Do not push that working copy to a public repo.** Keep it local or use a **private** repository.
+This repository is **generic placeholders only**. Your real workspace (after you copy a preset) will gain `USER.md`, `MEMORY.md`, logs, and drafts that can be sensitive. **Do not push that working copy to a public repo.** If you need off-machine backup, use **private** storage you trust; many people keep a filled workspace **on one PC only** and avoid syncing `memory/`, `intel/`, and `drafts/` to public clouds or shared folders.
 
 ## License
 
