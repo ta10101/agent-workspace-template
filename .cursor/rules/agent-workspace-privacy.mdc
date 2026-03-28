@@ -1,0 +1,13 @@
+---
+description: Never put private agent workspace data on public GitHub
+alwaysApply: true
+---
+
+# Agent workspace and public repos
+
+The user does **not** want private or sensitive material in **public** repositories.
+
+- A **filled** agent workspace (copied from this template) may contain `USER.md`, `MEMORY.md`, daily logs under `memory/`, `intel/`, `drafts/`, `shared-context/`, and similar. Treat these as **potentially sensitive**.
+- **Do not** suggest pushing that working copy to a **public** remote. Keep it local or use a **private** repo only.
+- This **template** repo should stay generic placeholders only; avoid real paths, usernames in examples, or personal details in README/docs.
+- When helping with GitHub releases or docs, reinforce that operators should not commit real memory, intel, or drafts to public forks.
