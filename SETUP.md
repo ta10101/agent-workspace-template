@@ -1,6 +1,6 @@
 # Setup checklist
 
-Copy a preset into a **working directory** (see [README](README.md)), then personalize.
+You should already have a **copy** of a preset in your own folder (see [README — Install and use](README.md#install-and-use)). Then personalize below.
 
 ## 1. Choose a preset
 

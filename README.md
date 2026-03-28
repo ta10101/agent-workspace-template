@@ -17,32 +17,72 @@ Inspired by concepts shared by [Shubham Saboo](https://www.linkedin.com/in/shubh
 
 Same **invariants**; larger editions add structure, not different rules. See [`docs/INVARIANTS.md`](docs/INVARIANTS.md) and [`docs/HYBRID_GITAGENT.md`](docs/HYBRID_GITAGENT.md).
 
-## Quick start
+## Install and use
 
-1. Copy a preset into a working folder (your real workspace should usually **not** be this git repo if you will fill it with private logs):
+There is **no package to `npm install`** for the markdown presets themselves. You copy files onto disk, then point your **coding agent or chat tool** at that folder and follow the playbooks in `AGENTS.md`.
 
-   **PowerShell (Windows)**
+### 1. Get the template
 
-   ```powershell
-   cd path\to\agent-workspace-template
-   .\scripts\copy-preset.ps1 -Preset full -Destination path\to\my-agent-workspace
-   # or: -Preset hybrid-gitagent
-   ```
+Pick one:
 
-   **Bash**
+- **Git clone** (keeps `scripts/` and all presets handy):
 
-   ```bash
-   ./scripts/copy-preset.sh full ~/my-agent-workspace
-   # or: ./scripts/copy-preset.sh hybrid-gitagent ~/my-agent-workspace
-   ```
+  ```bash
+  git clone https://github.com/ta10101/agent-workspace-template.git
+  cd agent-workspace-template
+  ```
 
-2. Follow [`SETUP.md`](SETUP.md) to replace placeholders and customize `USER.md`.
+- **Download zip** from the [releases page](https://github.com/ta10101/agent-workspace-template/releases), unzip, and use the `presets/<edition>/workspace` folder inside (or run scripts from the unzipped repo root).
 
-3. Initialize git **inside your copy** if you want versioned memory (optional):
+### 2. Create your real workspace (copy a preset)
 
-   ```bash
-   cd ~/my-agent-workspace && git init
-   ```
+Your **working copy** should live outside this template repo if you will add private `memory/`, `intel/`, and `drafts/` (see [Privacy](#privacy)).
+
+**PowerShell (Windows)**
+
+```powershell
+cd path\to\agent-workspace-template
+.\scripts\copy-preset.ps1 -Preset full -Destination path\to\my-agent-workspace
+```
+
+**macOS / Linux**
+
+```bash
+cd agent-workspace-template
+chmod +x scripts/copy-preset.sh
+./scripts/copy-preset.sh full ~/my-agent-workspace
+```
+
+`Preset` / first argument: `light`, `full`, or `hybrid-gitagent`.
+
+**Manual:** copy everything under `presets/<edition>/workspace/` into an empty folder.
+
+### 3. Personalize
+
+Follow **[SETUP.md](SETUP.md)** (placeholders, `USER.md`, `SOUL.md`, one-writer table). Optional: `git init` inside `my-agent-workspace` so memory and prompts are versioned.
+
+### 4. Use it with an AI assistant
+
+1. **Open the copied folder** in [Cursor](https://cursor.com), VS Code, or any tool that can read project files.
+2. **Start a chat** and instruct the model to follow the workspace rules, for example:
+   - *“Read root `AGENTS.md` and `USER.md`, then act as the agent described in `agents/research/SOUL.md` for this task.”*
+3. **Operate in passes** if you use multiple roles: run a session for `research` (it updates `intel/DAILY-INTEL.md`), then a session for `content` (it reads intel and writes `drafts/`). The **filesystem** is the handoff; nothing runs unless you or a scheduler start a session.
+4. Optional: add **`.cursor/rules`** in your copy (or per-agent instructions) so every chat automatically loads the right read order.
+
+**Hybrid preset:** install [gitagent](https://github.com/open-gitagent/gitagent) only if you want `gitagent validate`, `gitagent export --format system-prompt`, etc. See [`extensions/gitagent/README.md`](extensions/gitagent/README.md).
+
+### 5. Optional automation
+
+Cron, OpenClaw-style runners, or Telegram bots can **trigger** the same flows by opening a session or running a CLI; the template does not ship a daemon. Document commands in `HEARTBEAT.md` when you add them.
+
+## Quick start (short)
+
+1. Clone or download this repo.
+2. Copy a preset into `my-agent-workspace` (script or manual).
+3. Complete [SETUP.md](SETUP.md).
+4. Open `my-agent-workspace` in your editor and chat with an AI using `AGENTS.md` + the right `SOUL.md`.
+
+Details above apply to step 2–4.
 
 ## Phased rollout (suggested)
 

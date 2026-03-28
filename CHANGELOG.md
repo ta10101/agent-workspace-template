@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-(nothing yet)
+- README: expanded **Install and use** (clone/zip, copy preset, Cursor workflow, optional gitagent/automation).
 
 ## 1.1.0 — 2026-03-28
 
