@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.1.0 — 2026-03-28
 
 - Hybrid preset aligned with [gitagent](https://github.com/open-gitagent/gitagent) validation: `agent.yaml` (`agents` map, quoted semver, `tools: []`), `memory/MEMORY.md` + `memory.yaml`, `hooks/hooks.yaml`, `knowledge/index.yaml`, workflow YAML (`name` + `steps` array), `config/default.yaml`, split `examples/good-outputs.md` + `bad-outputs.md`, workspace `README.md`. `gitagent validate` passes from preset root.
 - Repo `.gitattributes` forces LF for `**/SKILL.md` so Windows checkouts do not break skill parsing.
