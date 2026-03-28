@@ -5,3 +5,4 @@ Pull requests are welcome for clearer templates, safer defaults, or documentatio
 - Keep fictional examples clearly labeled; do not paste other people’s private memory content.
 - Preserve the **one-writer rule** and three-layer structure documented in `docs/INVARIANTS.md`.
 - Avoid adding mandatory cloud services or API keys to the core presets.
+- For `hybrid-gitagent`, keep `skills/**/SKILL.md` with **LF** newlines only (see `.gitattributes`); run `npx @open-gitagent/gitagent validate` inside `presets/hybrid-gitagent/workspace` before merging structural changes.

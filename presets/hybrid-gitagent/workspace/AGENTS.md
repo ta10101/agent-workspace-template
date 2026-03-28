@@ -15,7 +15,7 @@ On session start, follow `hooks/bootstrap.md` mentally (read those files in orde
 5. `shared-context/THESIS.md`, `FEEDBACK-LOG.md`, `SIGNALS.md`
 6. `memory/runtime/context.md` (short state)
 7. `memory/YYYY-MM-DD.md` for **today** and **yesterday** (if present)
-8. **Main / direct sessions:** `MEMORY.md`
+8. **Main / direct sessions:** `memory/MEMORY.md` (see root `MEMORY.md` shim)
 
 ## Teardown
 

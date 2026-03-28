@@ -1,0 +1,14 @@
+# gitagent memory config — https://github.com/open-gitagent/gitagent/blob/main/spec/SPECIFICATION.md
+layers:
+  - name: working
+    path: MEMORY.md
+    max_lines: 200
+    format: markdown
+  - name: runtime
+    path: runtime/
+    format: markdown
+update_triggers:
+  - on_explicit_save
+archive_policy:
+  max_entries: 500
+  compress_after: 90d

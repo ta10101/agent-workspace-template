@@ -1,11 +1,5 @@
-# MEMORY.md (lead)
+# MEMORY.md (shim)
 
-Curated long-term memory. **Main sessions** load this. Distill from daily logs and `memory/runtime/dailylog.md` when patterns repeat.
+Curated long-term memory for the lead agent lives in **`memory/MEMORY.md`** (gitagent memory layer, keep under ~200 lines).
 
-## Preferences
-
-- (Bullets)
-
-## Hard lessons
-
-- (One line per never-again rule)
+Session flow: read `memory/MEMORY.md` in main/direct sessions instead of duplicating content here.

@@ -1,0 +1,2 @@
+# gitagent parses SKILL.md frontmatter with LF-only delimiters; CRLF breaks validation on Windows.
+**/SKILL.md text eol=lf

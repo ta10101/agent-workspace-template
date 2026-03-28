@@ -1,0 +1,3 @@
+# Optional: add script entries when you implement hooks/scripts/
+# Schema: https://github.com/open-gitagent/gitagent/blob/main/spec/schemas/hooks.schema.json
+hooks: {}

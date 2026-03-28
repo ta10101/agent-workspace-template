@@ -1,7 +1,7 @@
 # config/
 
-Environment-specific overrides (model names, feature flags). Use separate files per env if needed:
-
-- `local.example.yaml` — copy to `local.yaml` and gitignore the real one if it holds non-secrets you still do not want public
+- `default.yaml` — baseline flags (shipped with the preset).
+- Add e.g. `production.yaml` and merge per [gitagent config](https://github.com/open-gitagent/gitagent/blob/main/spec/SPECIFICATION.md) when you need env splits.
+- Optional: `local.yaml` for machine-specific overrides (gitignore if needed).
 
 Do **not** commit API keys. Use `.env` at workspace root.

@@ -1,4 +1,8 @@
 spec_version: "0.1.0"
 name: newsletter-agent
-version: 0.1.0
-description: Newsletter draft from intel
+version: "0.1.0"
+description: Newsletter draft from intel; writes drafts/TODAY-NEWSLETTER.md
+license: MIT
+tools: []
+tags:
+  - newsletter

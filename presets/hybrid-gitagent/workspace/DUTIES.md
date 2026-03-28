@@ -12,6 +12,11 @@ Lightweight **segregation of duties**: who may **write** which files. Expand if 
 
 **Conflicts (same agent must not do both):**
 
-- Intel maker must not also be the publisher of final public posts (human or another role approves).
+- **intel_maker** vs **publisher_checker** — the agent that writes raw intel should not be the sole approver of what ships publicly.
+- **draft_creator** vs **publisher_checker** — treat “publish” as a human or separate approval step.
 
 **Checker:** default is the **human** before anything ships externally.
+
+## gitagent-style SOD (optional hardening)
+
+If you later add `compliance.segregation_of_duties` to `agent.yaml`, mirror roles here and run `gitagent validate --compliance`. This template stays unregulated by default.

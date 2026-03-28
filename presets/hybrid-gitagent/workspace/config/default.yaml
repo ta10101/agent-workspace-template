@@ -1,0 +1,3 @@
+# Deep-merge with e.g. production.yaml when you add environments
+log_level: info
+compliance_mode: false

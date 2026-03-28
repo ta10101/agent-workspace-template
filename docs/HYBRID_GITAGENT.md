@@ -26,7 +26,16 @@ Use [`presets/hybrid-gitagent/workspace`](../presets/hybrid-gitagent/workspace) 
 
 ## Optional: gitagent CLI
 
-If you install `@open-gitagent/gitagent`, you can try `gitagent validate` on a copy of this workspace. Schema drift may require small edits; treat validation as advisory until you pin a spec version.
+Install [`@open-gitagent/gitagent`](https://www.npmjs.com/package/@open-gitagent/gitagent), `cd` into your **copied** hybrid workspace root, then:
+
+```bash
+gitagent validate
+gitagent info
+```
+
+The hybrid preset is maintained to satisfy **non-compliance** validation for the root manifest (required `agent.yaml` fields, `SOUL.md` present, declared `skills/` exist). If a future spec version adds stricter checks, run `validate` after upgrading the CLI and adjust YAML as prompted.
+
+**Windows:** `SKILL.md` files must use **LF** line endings; the upstream parser matches `^---\n` only. This repo sets `**/SKILL.md text eol=lf` in `.gitattributes`.
 
 ## Privacy
 

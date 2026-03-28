@@ -1,6 +1,7 @@
 ---
 name: daily-intel-sweep
-description: Refresh DAILY-INTEL from prioritized sources
+description: Refresh DAILY-INTEL from prioritized sources and audience filters
+license: MIT
 ---
 
 # Daily intel sweep

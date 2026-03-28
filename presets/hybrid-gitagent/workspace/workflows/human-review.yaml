@@ -1,24 +1,19 @@
-# Optional human-in-the-loop pattern (conceptual).
-# Aligns with gitagent PR review flows — adapt to your git host.
 name: human-review-before-publish
-description: Drafts exist on a branch; human merges after review
-triggers:
-  - pull_request
-
+description: Human reviews drafts before anything ships publicly
+version: "0.1.0"
 steps:
-  open_branch:
-    note: Create branch from main with drafts + intel updates only
+  - id: prepare_branch
+    action: Isolate draft and intel changes on a branch for review
 
-  human_review:
-    role: human
+  - id: human_review
+    action: Human reads drafts/TODAY-SHORTFORM.md and drafts/TODAY-NEWSLETTER.md
     depends_on:
-      - open_branch
-    actions:
-      - read drafts/TODAY-SHORTFORM.md
-      - read drafts/TODAY-NEWSLETTER.md
-      - approve or request edits
+      - prepare_branch
+    compliance:
+      requires_approval: true
+      audit_level: basic
 
-  merge:
-    role: human
+  - id: merge_or_revise
+    action: Human merges after approval or sends revision notes back to agents
     depends_on:
       - human_review

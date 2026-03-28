@@ -1,32 +1,26 @@
-# Declarative handoff — not executed by this template repo.
-# Inspired by gitagent SkillsFlow: https://github.com/open-gitagent/gitagent
 name: morning-intel-to-drafts
-description: Research writes intel; then content consumes it
-triggers:
-  - manual
-  - schedule_morning
-
+description: Research writes intel; content and newsletter consume it
+version: "0.1.0"
 steps:
-  intel_sweep:
+  - id: intel_sweep
+    action: Run daily intel sweep; write intel/DAILY-INTEL.md
+    skill: daily-intel-sweep
     agent: research
     outputs:
-      - intel/DAILY-INTEL.md
+      - intel_snapshot
 
-  shortform_drafts:
+  - id: shortform_drafts
+    action: Draft short-form posts from intel
     agent: content
     depends_on:
       - intel_sweep
-    reads:
-      - intel/DAILY-INTEL.md
-      - shared-context/THESIS.md
-    outputs:
-      - drafts/TODAY-SHORTFORM.md
+    inputs:
+      intel_path: intel/DAILY-INTEL.md
 
-  newsletter_draft:
+  - id: newsletter_draft
+    action: Draft newsletter from intel
     agent: newsletter
     depends_on:
       - intel_sweep
-    reads:
-      - intel/DAILY-INTEL.md
-    outputs:
-      - drafts/TODAY-NEWSLETTER.md
+    inputs:
+      intel_path: intel/DAILY-INTEL.md

@@ -3,7 +3,7 @@
 ## Every session
 
 1. `agent.yaml`, `SOUL.md`, `IDENTITY.md`, `DUTIES.md`
-2. Root `RULES.md`, root `DUTIES.md`
+2. Root `RULES.md`, root `DUTIES.md` (system SOD)
 3. Root `USER.md`
 4. `TARGET-AUDIENCE.md`, `RESEARCH-PROTOCOL.md`
 5. `shared-context/THESIS.md`, `FEEDBACK-LOG.md`, `SIGNALS.md`

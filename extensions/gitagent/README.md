@@ -2,7 +2,7 @@
 
 [`@open-gitagent/gitagent`](https://www.npmjs.com/package/@open-gitagent/gitagent) validates, exports, and runs **git-native** agent folders.
 
-This template’s **`hybrid-gitagent`** preset borrows its layout ideas (`agent.yaml`, `RULES.md`, `DUTIES.md`, `skills/`, `workflows/`, `hooks/`, `memory/runtime/`). It is **not** guaranteed to pass `gitagent validate` without tweaks; use the CLI as an optional check.
+This template’s **`hybrid-gitagent`** preset is checked with `gitagent validate` from `presets/hybrid-gitagent/workspace` (non-compliance mode). **`SKILL.md` files use LF line endings** (enforced via repo `.gitattributes`); CRLF breaks the upstream frontmatter regex on Windows.
 
 ```bash
 npm i -g @open-gitagent/gitagent
